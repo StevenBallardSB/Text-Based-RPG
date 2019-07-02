@@ -26,14 +26,22 @@ namespace Text_Based_RPG
                 Console.WriteLine("With that old rusty sword you probably would not have made it that far, so it was probably for the better.");
                 Console.WriteLine("The End.");
                 Console.WriteLine("Press 'Enter' to exit the game");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                }
+                CloseGame();
             }
             //if the user enters the number 2, they continue the story
             if (Choice == "2")
             {
                 CaveChoice(Choice);
+            }
+        }
+
+        /// <summary>
+        /// Lets the user close the program with the enter button
+        /// </summary>
+        private static void CloseGame()
+        {
+            while (Console.ReadKey().Key != ConsoleKey.Enter)
+            {
             }
         }
 
@@ -87,9 +95,7 @@ namespace Text_Based_RPG
                 Console.WriteLine("His strike goes right through your sword, breaking your sword in two and splitting your skull killing you instantly. ");
                 Console.WriteLine("Game Over.");
                 Console.WriteLine(" Press 'Enter' to exit the game");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                }
+                CloseGame();
             }
             //The choice to go into the cave
             if (Choice == "2")
@@ -108,9 +114,7 @@ namespace Text_Based_RPG
                 Console.WriteLine("You fall over unable to do anything as you struggle for breath, but at this point you have already breathed your last.");
                 Console.WriteLine("Game Over.");
                 Console.WriteLine(" Press 'Enter' to exit the game");
-                while (Console.ReadKey().Key != ConsoleKey.Enter) ;
-                {
-                }
+                CloseGame();
             }
         }
 
@@ -156,9 +160,7 @@ namespace Text_Based_RPG
                 Console.WriteLine("The body of the demon falls over, and still holding the head you watch as the life drains from the demons eyes.");
                 Console.WriteLine();
                 Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                }
+                CloseGame();
             }
             //The peaceful choice
             if (Choice == "2")
@@ -179,9 +181,7 @@ namespace Text_Based_RPG
                 Console.WriteLine("All with arrows notched, aimed at you.");
                 Console.WriteLine();
                 Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                }
+                CloseGame();
             }
             //Game over choice
             if (Choice == "3")
@@ -191,9 +191,7 @@ namespace Text_Based_RPG
                 Console.WriteLine("your insides burn as you slide the rest of the way down the spike. you hear the demon laughing just outside the pit as your vision darkens and you slip into death.");
                 Console.WriteLine("Game Over.");
                 Console.WriteLine(" Press 'Enter' to exit the game");
-                while (Console.ReadKey().Key != ConsoleKey.Enter)
-                {
-                }
+                CloseGame();
             }
         }
     }
