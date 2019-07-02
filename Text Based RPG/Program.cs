@@ -94,81 +94,10 @@ namespace Text_Based_RPG
             //The choice to go into the cave
             if (Choice == "2")
             {
-                Console.WriteLine();
-                Console.WriteLine("Being a little frightened of entering a dark cave without a source of light,");
-                Console.WriteLine("you decide to scavenge around for a torch before entering. While your scavenging,");
-                Console.WriteLine("you notice a figure dressed in black enter the cave wielding a pretty nice sword, much shinier than yours");
-                Console.WriteLine("With torch in hand you follow him inside the cave. On the walls there are some inscription written.");
-                Console.WriteLine("These inscription warn you of the dangers of the cave, warning of ropes that will choke you, and spike traps.");
-                Console.WriteLine("You notice buttons littered around the floor, and you take great care to avoid stepping on them.");
-                Console.WriteLine("Then you notice a body lying on the floor a little ways ahead.");
-                Console.WriteLine("After closer inspection you realize it was the figure from earlier dressed in black.");
-                Console.WriteLine("There are ropes rapped all around him squeazing around his neck, his face is purple and the whites of his eyes are red.");
-                Console.WriteLine("You notice his sword shining right next to him. He won't be needing that anymore, so you take it.");
-                Console.WriteLine("You make your way deeper into the cave, and at the very end, you see waiting in the back a demon guarding a treasure chest.");
-                Console.WriteLine("You ask the demon whats in the treasure chest, and he responds.");
-                Console.WriteLine();
-                Console.WriteLine("Demon: Just knowing that it exists makes you a dead man!");
-                Console.WriteLine();
-                Console.WriteLine("You: Not if I kill you first!(1)");
-                Console.WriteLine("You: But I don't know that it exists.(2)");
-                Console.WriteLine("Take a step back.(3)");
-                Choice = Console.ReadLine();
-                if (Choice == "1")
-                {
-                    Console.WriteLine("You unsheath your sword and take a combat stance");
-                    Console.WriteLine("You feel the ground shake beneath as you stare into the eyes of the demon. He lowers his head, his menacing horns pointed at you,");
-                    Console.WriteLine("And he begins to charge at you. You jump out of the way and swing your sword at his side, drawing his crimson blood, some of it landing on your arms burning you.");
-                    Console.WriteLine("Enraged, the demon screams at you charging up to launch fire at you. You duck behind the treasure chest.");
-                    Console.WriteLine("The demons fire impacts the chest burning it down revealing that inside was a shiny metal shield impervious to the demons fire.");
-                    Console.WriteLine("You pick up the shield and quickly pull it up infront of you as the demon blows fire onto you.");
-                    Console.WriteLine("You walk through the flames holding up the shield. You bash the shield right onto the demons mouth dazing it.");
-                    Console.WriteLine("You then stab the demon opening up another wound in his chest. He falls to his knees blood pooring from both his wounds.");
-                    Console.WriteLine("You grab him by one of his horns and stare into his eyes as you take the sword and sever his head from his body.");
-                    Console.WriteLine("The body of the demon falls over, and still holding the head you watch as the life drains from the demons eyes.");
-                    Console.WriteLine();
-                    Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
-                    while (Console.ReadKey().Key != ConsoleKey.Enter)
-                    {
-                    }
-                }
-                if (Choice == "2")
-                {
-                    Console.WriteLine("(you lie through your teeth denying it's existence)");
-                    Console.WriteLine("Demon: What? you were just asking about it!");
-                    Console.WriteLine();
-                    Console.WriteLine("You: No I wasn't, you must have been daydreaming");
-                    Console.WriteLine();
-                    Console.WriteLine("Demon: But can't you see it right behend me!");
-                    Console.WriteLine();
-                    Console.WriteLine("You: No, as far as I see you are the only thing in this cave besided myself.");
-                    Console.WriteLine();
-                    Console.WriteLine("Demon: Then just know that you have no buisness in the cave! Leave now!");
-                    Console.WriteLine();
-                    Console.WriteLine("You turn around and make your way out of the cave careful not to die to traps and stuff on the the way out. You are glad to have survived the demon encounter");
-                    Console.WriteLine("After exiting the cave and adjusting your eyes, you see that you are surrounded by many men with the crest of a nearby country on their chests.");
-                    Console.WriteLine("All with arrows notched, aimed at you.");
-                    Console.WriteLine();
-                    Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
-                    while (Console.ReadKey().Key != ConsoleKey.Enter)
-                    {
-                    }
-                }
-                if (Choice == "3")
-                {
-                    Console.WriteLine("Scared of the demon you take a step back back, but your foot doesn't land on anything and you slip and fall.");
-                    Console.WriteLine("You land on one big spide piercing you right through your chest, you see its tip in front of you protruding with your heart at it's tip.");
-                    Console.WriteLine("your insides burn as you slide the rest of the way down the spike. you hear the demon laughing just outside the pit as your vision darkens and you slip into death.");
-                    Console.WriteLine("Game Over.");
-                    Console.WriteLine(" Press 'Enter' to exit the game");
-                    while (Console.ReadKey().Key != ConsoleKey.Enter)
-                    {
-                    }
-                }
-                
-
-
+                InsideTheCave();
             }
+
+            //The other game over choice
             if (Choice == "3")
             {
                 Console.WriteLine();
@@ -180,6 +109,89 @@ namespace Text_Based_RPG
                 Console.WriteLine("Game Over.");
                 Console.WriteLine(" Press 'Enter' to exit the game");
                 while (Console.ReadKey().Key != ConsoleKey.Enter) ;
+                {
+                }
+            }
+        }
+
+        /// <summary>
+        /// The segment of the story where the user is inside a cave
+        /// </summary>
+        static void InsideTheCave()
+        {
+            string Choice;
+            Console.WriteLine();
+            Console.WriteLine("Being a little frightened of entering a dark cave without a source of light,");
+            Console.WriteLine("you decide to scavenge around for a torch before entering. While your scavenging,");
+            Console.WriteLine("you notice a figure dressed in black enter the cave wielding a pretty nice sword, much shinier than yours");
+            Console.WriteLine("With torch in hand you follow him inside the cave. On the walls there are some inscription written.");
+            Console.WriteLine("These inscription warn you of the dangers of the cave, warning of ropes that will choke you, and spike traps.");
+            Console.WriteLine("You notice buttons littered around the floor, and you take great care to avoid stepping on them.");
+            Console.WriteLine("Then you notice a body lying on the floor a little ways ahead.");
+            Console.WriteLine("After closer inspection you realize it was the figure from earlier dressed in black.");
+            Console.WriteLine("There are ropes rapped all around him squeazing around his neck, his face is purple and the whites of his eyes are red.");
+            Console.WriteLine("You notice his sword shining right next to him. He won't be needing that anymore, so you take it.");
+            Console.WriteLine("You make your way deeper into the cave, and at the very end, you see waiting in the back a demon guarding a treasure chest.");
+            Console.WriteLine("You ask the demon whats in the treasure chest, and he responds.");
+            Console.WriteLine();
+            Console.WriteLine("Demon: Just knowing that it exists makes you a dead man!");
+            Console.WriteLine();
+            Console.WriteLine("You: Not if I kill you first!(1)");
+            Console.WriteLine("You: But I don't know that it exists.(2)");
+            Console.WriteLine("Take a step back.(3)");
+            Choice = Console.ReadLine();
+            //The violent chocie
+            if (Choice == "1")
+            {
+
+                Console.WriteLine("You unsheath your sword and take a combat stance");
+                Console.WriteLine("You feel the ground shake beneath as you stare into the eyes of the demon. He lowers his head, his menacing horns pointed at you,");
+                Console.WriteLine("And he begins to charge at you. You jump out of the way and swing your sword at his side, drawing his crimson blood, some of it landing on your arms burning you.");
+                Console.WriteLine("Enraged, the demon screams at you charging up to launch fire at you. You duck behind the treasure chest.");
+                Console.WriteLine("The demons fire impacts the chest burning it down revealing that inside was a shiny metal shield impervious to the demons fire.");
+                Console.WriteLine("You pick up the shield and quickly pull it up infront of you as the demon blows fire onto you.");
+                Console.WriteLine("You walk through the flames holding up the shield. You bash the shield right onto the demons mouth dazing it.");
+                Console.WriteLine("You then stab the demon opening up another wound in his chest. He falls to his knees blood pooring from both his wounds.");
+                Console.WriteLine("You grab him by one of his horns and stare into his eyes as you take the sword and sever his head from his body.");
+                Console.WriteLine("The body of the demon falls over, and still holding the head you watch as the life drains from the demons eyes.");
+                Console.WriteLine();
+                Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
+                while (Console.ReadKey().Key != ConsoleKey.Enter)
+                {
+                }
+            }
+            //The peaceful choice
+            if (Choice == "2")
+            {
+                Console.WriteLine("(you lie through your teeth denying it's existence)");
+                Console.WriteLine("Demon: What? you were just asking about it!");
+                Console.WriteLine();
+                Console.WriteLine("You: No I wasn't, you must have been daydreaming");
+                Console.WriteLine();
+                Console.WriteLine("Demon: But can't you see it right behend me!");
+                Console.WriteLine();
+                Console.WriteLine("You: No, as far as I see you are the only thing in this cave besided myself.");
+                Console.WriteLine();
+                Console.WriteLine("Demon: Then just know that you have no buisness in the cave! Leave now!");
+                Console.WriteLine();
+                Console.WriteLine("You turn around and make your way out of the cave careful not to die to traps and stuff on the the way out. You are glad to have survived the demon encounter");
+                Console.WriteLine("After exiting the cave and adjusting your eyes, you see that you are surrounded by many men with the crest of a nearby country on their chests.");
+                Console.WriteLine("All with arrows notched, aimed at you.");
+                Console.WriteLine();
+                Console.WriteLine("You have reached the end of this alpha. Press enter to exit.");
+                while (Console.ReadKey().Key != ConsoleKey.Enter)
+                {
+                }
+            }
+            //Game over choice
+            if (Choice == "3")
+            {
+                Console.WriteLine("Scared of the demon you take a step back back, but your foot doesn't land on anything and you slip and fall.");
+                Console.WriteLine("You land on one big spide piercing you right through your chest, you see its tip in front of you protruding with your heart at it's tip.");
+                Console.WriteLine("your insides burn as you slide the rest of the way down the spike. you hear the demon laughing just outside the pit as your vision darkens and you slip into death.");
+                Console.WriteLine("Game Over.");
+                Console.WriteLine(" Press 'Enter' to exit the game");
+                while (Console.ReadKey().Key != ConsoleKey.Enter)
                 {
                 }
             }
