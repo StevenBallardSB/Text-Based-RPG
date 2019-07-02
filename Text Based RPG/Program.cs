@@ -10,10 +10,15 @@ namespace Text_Based_RPG
     {
         static void Main(string[] args)
         {
+            //The value for all multiple choice questions
             string Choice = null;
             Introduction();
             Tutorial();
+
+            //altering the choice variable to be the users keystroke
             Choice = Console.ReadLine();
+
+            //if the user enters the number 1, they are taken down this story line
             if (Choice == "1")
             {
                 Console.WriteLine();
@@ -25,11 +30,16 @@ namespace Text_Based_RPG
                 {
                 }
             }
+            //if the user enters the number 2, they continue the story
             if (Choice == "2")
             {
                 CaveChoice(Choice);
             }
         }
+
+        /// <summary>
+        /// The introduction to the story, which is just a lot of print statements
+        /// </summary>
         static void Introduction()
         {
             Console.WriteLine("Welcome to a brand new world, Created entirely from my mind alone");
@@ -40,6 +50,10 @@ namespace Text_Based_RPG
             Console.WriteLine("You must decide wether or not to continue your boring life as a farmer(1),");
             Console.WriteLine("or to take up your old rusty sword and explore the woods to the east(2)");
         }
+
+        /// <summary>
+        /// The tutorial that teaches the user how to play the game using a bunch of print statements
+        /// </summary>
         static void Tutorial()
         {
             Console.WriteLine();
@@ -47,6 +61,11 @@ namespace Text_Based_RPG
             Console.WriteLine("Next, press enter to solidify your decision");
             Console.WriteLine();
         }
+
+        /// <summary>
+        /// The choice to go into the cave or continue on
+        /// </summary>
+        /// <param name="Choice"></param>
         static void CaveChoice(String Choice)
         {
             Console.WriteLine();
@@ -57,6 +76,8 @@ namespace Text_Based_RPG
             Console.WriteLine(",or you could just dive right in. and get to any loot that might be in there first.(3)");
             Console.WriteLine();
             Choice = Console.ReadLine();
+
+            //The gane over choice
             if (Choice == "1")
             {
                 Console.WriteLine();
@@ -70,6 +91,7 @@ namespace Text_Based_RPG
                 {
                 }
             }
+            //The choice to go into the cave
             if (Choice == "2")
             {
                 Console.WriteLine();
